@@ -23,7 +23,7 @@
 					<ul>
 					<?php if (is_page()) { $highlight = "page_item"; } else {$highlight = "page_item current_page_item"; } ?>
 						<li class="<?php echo $highlight; ?>">
-						<?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>
+						<?php wp_list_pages('sort_column=menu_order&depth=2&title_li='); ?>
 					</ul>
 				</div>		
 			</div>

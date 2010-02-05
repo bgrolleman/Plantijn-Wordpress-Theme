@@ -1,4 +1,5 @@
 /*
+vim: foldmethod=marker
 Theme Name: Plantijn.org
 Theme URI: 
 Description: Theme setup by GetFriday for Plantijn.org
@@ -7,6 +8,7 @@ Author URI:
 
 Red: #e41740;
 Bruin: #645647;
+
 */
 
 /* Body and Wrapper {{{ */
@@ -34,6 +36,7 @@ body {
 	margin:0 0 0 20px;
 }
 /* }}} */
+/* Header and Navigation Menu {{{ */
 #header {
 	height:150px;
 	width: 1002px;
@@ -67,27 +70,60 @@ body {
 	margin:0 ;
 	width:110px;
 	}
-#navlist ul li a{
+#navlist ul li a, #navlist ul li ul li a {
 	display:block;
 	float:left;
 	color:#fff;
-	margin:40px 0px 0px 5px;
+	margin: 40px 0px 0px 5px;
 	padding: 5px 0px 0px 0px;
 	min-width: 107px; 
 	height: 30px;
 	background:url(images/menu_over.gif) no-repeat 0px 0px;
 	text-align: center;
 	text-decoration:none;
-	font-size: 14px;
+	font-size: 16px;
 	font-family: Trebuchet MS;
 	}
 #navlist ul li a:hover,#navlist ul li.current_page_item a{
 	background:url(images/menu_nor.gif) no-repeat 0px 0px;
 	}
+
 #navlist ul li .current_page_item a,#navlist ul li .current_page_item a:hover {
 	background:url(images/menu_over.gif) no-repeat 0px 0px;
-	}
-	
+}
+
+/* Dropdown Menu */	
+#navlist ul li ul, #navlist ul li ul li , #navlist ul li ul li a {
+	padding: 0px;
+	margin: 0px;
+}
+#navlist ul li ul {
+	display: none;
+	position: relative;
+	top: -5px;
+	left: 5px;
+}
+#navlist ul li:hover ul { 
+	display: block;
+}
+#navlist ul li ul li a {
+	padding: 5px 0px 0px 0px;
+	background: #645647;
+}
+#navlist ul li ul li a:hover {
+	background: #e41740;
+	padding: 5px 0px 0px 0px;
+}
+#navlist ul li ul li:last-of-type a {
+	padding: 5px 0px 0px 0px;
+	background:url(images/menu_over.gif) no-repeat 0px 0px;
+}
+#navlist ul li ul li:last-of-type a:hover {
+	padding: 5px 0px 0px 0px;
+	background:url(images/menu_nor.gif) no-repeat 0px 0px;
+}
+/* }}} */
+
 #footer {	
 	height:55px;
 	float:left;
@@ -103,7 +139,11 @@ body {
 	font-color: #645647;
 	text-align:left;
 }
+
 /* General Header Styles */
+body {
+	font-family: Trebuchet MS;
+}
 h2, h3 {
 	font-size: large; 
 	font-family:  Trebuchet MS;
