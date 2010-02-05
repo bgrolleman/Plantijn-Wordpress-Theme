@@ -100,7 +100,7 @@ body {
 #navlist ul li ul {
 	display: none;
 	position: relative;
-	top: -5px;
+	top: -10px;
 	left: 5px;
 }
 #navlist ul li:hover ul { 
